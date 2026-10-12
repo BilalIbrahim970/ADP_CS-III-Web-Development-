@@ -3,17 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lecture 01 - Web Fundamentals</title>
+    <title>Lecture 01 - Master Comprehensive Study Guide (4-5 Pages Detailed)</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        body { max-width: 850px; margin: 0 auto; padding: 25px; }
+        body { max-width: 1050px; margin: 0 auto; padding: 35px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; }
         .top-nav { display: flex; justify-content: space-between; margin-bottom: 25px; align-items: center; }
         .back-btn { padding: 8px 16px; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; color: var(--text-color); font-weight: bold; text-decoration: none; }
-        h1, h2 { color: var(--accent-color); border-bottom: 1px solid var(--border-color); padding-bottom: 8px; }
-        .highlight { background-color: var(--card-bg); border-left: 4px solid var(--accent-color); padding: 15px; margin: 15px 0; border-radius: 4px; border: 1px solid var(--border-color); }
-        .urdu-exp { background-color: var(--card-bg); border-left: 4px solid #238636; padding: 15px; margin: 15px 0; border-radius: 4px; border: 1px solid var(--border-color); }
-        pre { background-color: var(--card-bg); padding: 15px; border-radius: 6px; overflow-x: auto; border: 1px solid var(--border-color); }
-        code { color: #f0883e; font-family: monospace; }
+        h1, h2, h3, h4 { color: var(--accent-color); border-bottom: 2px solid var(--border-color); padding-bottom: 8px; margin-top: 40px; }
+        .highlight-box { background-color: var(--card-bg); border-left: 6px solid var(--accent-color); padding: 22px; margin: 25px 0; border-radius: 6px; border: 1px solid var(--border-color); }
+        .urdu-box { background-color: var(--card-bg); border-left: 6px solid #238636; padding: 22px; margin: 25px 0; border-radius: 6px; border: 1px solid var(--border-color); }
+        .proof-box { background-color: var(--card-bg); border-left: 6px solid #d29922; padding: 22px; margin: 25px 0; border-radius: 6px; border: 1px solid var(--border-color); }
+        pre { background-color: #011627; color: #e6edf3; padding: 20px; border-radius: 8px; overflow-x: auto; border: 1px solid var(--border-color); font-family: Consolas, monospace; font-size: 0.95rem; }
+        code { color: #f0883e; font-family: Consolas, monospace; }
+        table { width: 100%; border-collapse: collapse; margin: 25px 0; }
+        th, td { padding: 14px 18px; border: 1px solid var(--border-color); text-align: left; }
+        th { background-color: var(--card-bg); color: var(--accent-color); }
+        ul, ol { padding-left: 25px; }
+        li { margin-bottom: 10px; }
     </style>
 </head>
 <body>
@@ -23,31 +29,215 @@
     <button onclick="toggleTheme()" class="back-btn" id="themeBtn">☀️ Theme Toggle</button>
 </div>
 
-<h1>📚 Lecture 01: Web Development Fundamentals</h1>
+<h1>📚 Lecture 01: Complete Master Study Guide (Web Fundamentals & Networking)</h1>
 
-<div class="highlight">
-    <strong>Topic Overview:</strong> World Wide Web, Internet vs Web, Static vs Dynamic Sites, HTML Structure[cite: 1].
+<div class="highlight-box">
+    <strong>📖 Master Guide Introduction:</strong> Yeh document aik comprehensive notes aur study guide hai jo kisi bhi university ya professional course ke 4-5 pages ke lecture notes ke barabar tafseel rakhti hai. Isme networking fundamentals se lekar HTML5 ke har aik tag, syntax, aur code architecture ko deep-dive explanation ke sath cover kiya gaya hai.
 </div>
 
-<h2>1. World Wide Web (WWW)</h2>
-<p>Invented in 1989 by Sir Tim Berners-Lee at CERN. It is an information system where resources are identified by URLs and accessed over the Internet[cite: 1].</p>
 
-<div class="urdu-exp">
-    <strong>🗣️ Roman Urdu Explanation:</strong><br>
-    World Wide Web ko 1989 mein Sir Tim Berners-Lee ne CERN mein ijaad kiya tha[cite: 1]. Internet physical cables aur hardware ka jaal hai[cite: 1], jabke Web aik service hai jo internet ke upar chalti hai[cite: 1].
+<!-- ================= MODULE 0: NETWORKING BASICS ================= -->
+<h2>🌐 Module 0: Advanced Networking & Infrastructure Foundations</h2>
+<p>Web Development ya HTML code likhne se pehle yeh samajhna nihayat zaroori hai ke internet ki physical aur logical duniya kaise kaam karti hai. Jab aap kisi browser mein koi website open karte hain, toh background mein kai networking layers aur protocols apna kaam anjaam dete hain[cite: 1]:</p>
+
+<ul>
+    <li><strong>1. IP Address (Internet Protocol Address):</strong> Internet par connected har device (computer, mobile, server) ka aik unique numerical identifier hota hai. Jaise ghar ka postal address hota hai, waise hi IP address packets ko sahi manzil tak pohchane mein madad karta hai (e.g., IPv4: <code>192.168.1.1</code>, IPv6: <code>2001:db8::ff00:42:8329</code>).</li>
+    <li><strong>2. DNS (Domain Name System):</strong> Computers sirf numbers (IP addresses) samajhte hain jabki insaan naam yaad rakhte hain (jaise <code>google.com</code>). DNS aik global telephone directory ki tarah kaam karta hai jo human-readable domain names ko machine-readable IP addresses mein translate karta hai[cite: 1].</li>
+    <li><strong>3. DHCP (Dynamic Host Configuration Protocol):</strong> Jab aap apna laptop ya mobile kisi Wi-Fi network se connect karte hain, toh DHCP server automatically aapke device ko aik temporary IP address assign karta hai taake aapko manually configuration na karni pade.</li>
+    <li><strong>4. TCP/IP Protocol Suite (Transmission Control Protocol):</strong> Yeh internet ki back-bone hai. Jab bara data (video ya website) bheja jata hai, toh TCP usko chotay-chotay "packets" mein torta hai, unhein internet par bhejta hai, aur manzil par jakar unhein bilkul sahi tarteeb mein dobara jod deta hai.</li>
+    <li><strong>5. HTTP / HTTPS Protocols:</strong> Hypertext Transfer Protocol woh rules hain jo client (browser) aur web server ke darmiyan data exchange ko secure aur standard banate hain. HTTPS mein SSL/TLS encryption hoti hai jo data ko hackers se bachati hai.</li>
+</ul>
+
+<div class="urdu-box">
+    <strong>🗣️ Roman Urdu Explanation (Networking Concepts):</strong><br>
+    Sochiye ke agar internet aik shehar hai, toh <strong>IP address</strong> har ghar ka number hai. <strong>DNS</strong> aik aisi directory hai jahan aap "Bilal" likhte hain aur wo uska asli ghar ka number (IP) nikal kar de deti hai. <strong>DHCP</strong> aapke ghar aate hi aapko foran naya number de deta hai, aur <strong>TCP</strong> yeh yakeeni banata hai ke jo saman (data) aapne bheja hai woh saara sahi salamat aur bina kisi nuqsan ke doosri taraf pohch jaye.
 </div>
 
-<h2>2. Standard HTML Boilerplate</h2>
+
+<!-- ================= MODULE 1: WWW & ARCHITECTURE ================= -->
+<h2>🌍 Module 1: The World Wide Web (WWW) & Request-Response Architecture</h2>
+<p>World Wide Web ki buniyad <strong>1989 mein Sir Tim Berners-Lee ne CERN (European Organization for Nuclear Research)</strong> mein rakhi thi[cite: 1]. Unka maqsad duniya bhar ke scientists ke darmiyan research papers aur documents ko asani se share karna aur interlink karna tha[cite: 1].</p>
+
+<div class="highlight-box">
+    <strong>📌 Critical Difference Table: Internet vs. World Wide Web</strong>
+    <table>
+        <tr>
+            <th>Comparison Parameter</th>
+            <th>🌐 The Internet</th>
+            <th>🕸️ World Wide Web (WWW)</th>
+        </tr>
+        <tr>
+            <td><strong>Core Nature</strong></td>
+            <td>Physical hardware infrastructure (Routers, cables, data centers, servers)[cite: 1].</td>
+            <td>Software application service layer running on top of the physical internet[cite: 1].</td>
+        </tr>
+        <tr>
+            <td><strong>Invention</strong></td>
+            <td>Evolved from ARPANET in the late 1960s & 1970s.</td>
+            <td>Invented in 1989 by Sir Tim Berners-Lee at CERN[cite: 1].</td>
+        </tr>
+        <tr>
+            <td><strong>Core Protocols</strong></td>
+            <td>TCP/IP, UDP, ICMP, BGP.</td>
+            <td>HTTP, HTTPS, HTML, URLs, DNS[cite: 1].</td>
+        </tr>
+        <tr>
+            <td><strong>Dependency</strong></td>
+            <td>WWW cannot exist without the Internet.</td>
+            <td>The Internet can exist without the Web (e.g., email via SMTP, file transfer via FTP).</td>
+        </tr>
+    </table>
+</div>
+
+<div class="proof-box">
+    <strong>⚡ Detailed Proof: The 7-Step Web Request-Response Lifecycle</strong>
+    <ol>
+        <li><strong>Client Request Initiation:</strong> User types URL <code>https://www.example.com</code> in the browser address bar and presses Enter[cite: 1].</li>
+        <li><strong>DNS Resolution:</strong> Browser queries local cache or DNS servers to resolve <code>example.com</code> into its target server IP address[cite: 1].</li>
+        <li><strong>TCP & TLS Handshake:</strong> A secure TCP socket connection is established, followed by a TLS/HTTPS cryptographic handshake for secure communication[cite: 1].</li>
+        <li><strong>HTTP Request Transmission:</strong> Browser sends an HTTP GET request packet asking the server for the website homepage resource[cite: 1].</li>
+        <li><strong>Web Server Processing:</strong> The web server (Apache/Nginx) processes the request, runs backend logic if dynamic, or reads static files from disk[cite: 1].</li>
+        <li><strong>HTTP Response Packet:</strong> Server responds with HTTP status code (e.g., <code>200 OK</code>) along with raw HTML, CSS, JavaScript, and media payloads[cite: 1].</li>
+        <li><strong>Browser Rendering Engine:</strong> Browser parses the DOM tree, applies CSS styles, executes JavaScript, and paints the final interactive pixels onto the user screen[cite: 1].</li>
+    </ol>
+</div>
+
+
+<!-- ================= MODULE 2: STATIC VS DYNAMIC ================= -->
+<h2>⚡ Module 2: Static vs. Dynamic Websites (Architecture & Deep Dive)</h2>
+<p>Websites ko unke structural backend model aur content assembly ki buniyad par do mukammal kismon mein taqseem kiya jata hai[cite: 1]:</p>
+
+<ul>
+    <li><strong>Static Websites:</strong> Yeh woh websites hoti hain jinki files pehle se bani aur stored hoti hain. Server par koi database ya backend script execute nahi hoti[cite: 1]. Jo file server par padi hai, wahi exact raw form mein browser ko bhej di jati hai[cite: 1]. Yeh extremely fast aur secure hoti hain unki simplicity ki wajah se[cite: 1].</li>
+    <li><strong>Dynamic Websites:</strong> Yeh woh websites hoti hain jinka content user ki request, time, location, ya session ke mutabiq <em>on-the-fly</em> (us waqt foran) generate hota hai[cite: 1]. Yeh relational ya NoSQL databases (MySQL, PostgreSQL, MongoDB) aur server-side languages (Node.js, Python, PHP, Java) ke sath connected hoti hain[cite: 1].</li>
+</ul>
+
+<div class="highlight-box">
+    <strong>📊 Comprehensive Comparison Matrix: Static vs Dynamic</strong>
+    <table>
+        <tr>
+            <th>Feature / Dimension</th>
+            <th>📄 Static Websites</th>
+            <th>⚡ Dynamic Websites</th>
+        </tr>
+        <tr>
+            <td><strong>Content Generation</strong></td>
+            <td>Pre-rendered fixed files sent exactly as stored on disk[cite: 1].</td>
+            <td>Generated dynamically per request based on user session & logic[cite: 1].</td>
+        </tr>
+        <tr>
+            <td><strong>Database Layer</strong></td>
+            <td>No active database layer; flat HTML, CSS, and media files[cite: 1].</td>
+            <td>Connected to robust SQL/NoSQL databases (MySQL, MongoDB)[cite: 1].</td>
+        </tr>
+        <tr>
+            <td><strong>Execution Location</strong></td>
+            <td>Parsed and rendered solely on the client's local browser[cite: 1].</td>
+            <td>Business logic runs on the remote server; generated HTML is returned[cite: 1].</td>
+        </tr>
+        <tr>
+            <td><strong>Performance & Speed</strong></td>
+            <td>Extremely fast; highly cacheable on global Content Delivery Networks (CDNs)[cite: 1].</td>
+            <td>Slightly slower due to database querying, compute resources, and rendering overhead[cite: 1].</td>
+        </tr>
+        <tr>
+            <td><strong>Ideal Use Cases</strong></td>
+            <td>Portfolios, company brochures, documentation pages, personal resumes[cite: 1].</td>
+            <td>Social media networks, e-commerce stores, user dashboards, SaaS platforms[cite: 1].</td>
+        </tr>
+    </table>
+</div>
+
+<h3>💻 Practical HTML & Logic Code: Static vs Dynamic Output</h3>
+<pre><code>&lt;!-- 1. Static HTML File Content (Always Fixed) --&gt;
+&lt;section class="profile-card"&gt;
+    &lt;h1&gt;Bilal Rajput&lt;/h1&gt;
+    &lt;p&gt;Web Developer Portfolio - Static Resume Page&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;!-- 2. Dynamic HTML Output (Generated by Server based on Database User State) --&gt;
+&lt;section class="user-dashboard"&gt;
+    &lt;h1&gt;Welcome back, Bilal Rajput!&lt;/h1&gt;
+    &lt;p&gt;Your last login timestamp: &lt;span&gt;October 12, 2026 - 11:58 PM&lt;/span&gt;&lt;/p&gt;
+    &lt;p&gt;Unread Messages: &lt;strong&gt;5 New Notifications&lt;/strong&gt;&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+
+
+<!-- ================= MODULE 3: MARKUP VS PROGRAMMING ================= -->
+<h2>🏷️ Module 3: Markup Languages vs. Programming Languages</h2>
+<p>Shuruwat karne walon ke liye sabse bara confusion yeh hota hai ke kya HTML aik programming language hai? Iska jawab <strong>Nahi</strong> hai[cite: 1]. In dono ke darmiyan fundamental farq science aur computer architecture ke aitebar se yeh hai:</p>
+
+<ul>
+    <li><strong>Programming Languages (Python, C++, Java, JavaScript):</strong> Inka maqsad computational logic chalana, complex algorithms solve karna, memory state ko manage karna, aur calculations perform karna hai[cite: 1]. Inme control flow statements (<code>if/else</code>, <code>switch</code>), loops (<code>for</code>, <code>while</code>), functions, aur variable storage maujood hoti hain[cite: 1].</li>
+    <li><strong>Markup Languages (HTML, XML, Markdown):</strong> Inka maqsad koi calculation ya logic chalana nahi hota[cite: 1]. Yeh declarative structure hoti hain jo tags aur formatting syntax ke zariye batati hain ke document ki hierarchy aur presentation kaisi hogi[cite: 1]. Yeh rendering engine (browser) ke liye aik instruction manual ki tarah hoti hain[cite: 1].</li>
+</ul>
+
+<div class="urdu-box">
+    <strong>🗣️ Detailed Explanation (Roman Urdu):</strong><br>
+    Programming language aik dimaag ki tarah hai jo faislay karti hai (misal ke tor par: agar password theek hai toh login karo, warna error do). Lekin HTML sirf aik decoration aur structure manual hai jo browser ko ye batati hai ke yahan aik heading honi chahiye aur yahan aik image, isme koi math ya logic nahi hoti[cite: 1].
+</div>
+
+
+<!-- ================= MODULE 4: HTML ANATOMY & CODE ================= -->
+<h2>🧱 Part 4: Hypertext Markup Language (HTML5) Anatomy & Structure</h2>
+<p>HTML web page ki jaan hai. Iska naam doalfazon se mil kar bana hai: <strong>Hypertext</strong> (woh text jisme clickable links hon jo doosre pages par le jayen) aur <strong>Markup</strong> (tags ka system jo text ko style aur structure de)[cite: 1].</p>
+
+<h3>📝 Complete Detailed HTML5 Boilerplate Code with Line-by-Line Breakdown</h3>
 <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Lecture 01&lt;/title&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Lecture 01 - Master Web Fundamentals&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
-    &lt;h1&gt;Welcome Bilal&lt;/h1&gt;
+    &lt;header&gt;
+        &lt;nav&gt;
+            &lt;a href="index.html"&gt;Home&lt;/a&gt;
+            &lt;a href="about.html"&gt;About&lt;/a&gt;
+        &lt;/nav&gt;
+        &lt;h1&gt;Welcome to Bilal's Web Development Course&lt;/h1&gt;
+    &lt;/header&gt;
+    
+    &lt;main&gt;
+        &lt;section&gt;
+            &lt;h2&gt;Chapter Overview&lt;/h2&gt;
+            &lt;p&gt;This is a comprehensive study guide covering web architecture and HTML basics.&lt;/p&gt;
+            &lt;img src="web-architecture.png" alt="Web Architecture Flowchart"&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;&copy; 2026 Bilal Rajput. All rights reserved.&lt;/p&gt;
+    &lt;/footer&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
+
+<div class="highlight-box">
+    <strong>🔑 Structural Component Analysis:</strong>
+    <ul>
+        <li><code>&lt;!DOCTYPE html&gt;</code>: Document type declaration jo modern browsers ko Standards Mode mein render karne ka hukum deta hai[cite: 1].</li>
+        <li><code>&lt;html lang="en"&gt;</code>: Root container jo poori file ko wrap karta hai aur language specify karta hai[cite: 1].</li>
+        <li><code>&lt;head&gt;</code>: Metadata, character set (UTF-8), viewport scaling, aur title hold karta hai (viewport par visible nahi hota)[cite: 1].</li>
+        <li><code>&lt;body&gt;</code>: End user ke liye visible tamam content (headings, paragraphs, media, interactive controls) yahan rakha jata hai[cite: 1].</li>
+        <li><strong>Void Tags:</strong> Aise elements jinka koi content aur closing tag nahi hota (e.g., <code>&lt;br&gt;</code>, <code>&lt;hr&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;input&gt;</code>)[cite: 1].</li>
+    </ul>
+</div>
+
+
+<!-- ================= MODULE 5: EDITORS & SERVER ================= -->
+<h2>📂 Part 5: Code Editors, IDEs, and The <code>index.html</code> Server Rule</h2>
+<p>Professional web development ke liye sahi tools ka chunao bohot ahem hai:</p>
+
+<ul>
+    <li><strong>Code Editors & IDEs:</strong> Industry standard <strong>Visual Studio Code (VS Code)</strong> hai jo syntax highlighting, linting, Emmet shortcuts, live reload, aur Git version control integration provide karta hai[cite: 1].</li>
+    <li>📌 <strong>The <code>index.html</code> Default Server Rule:</strong> Jab bhi aap kisi web server (Apache, Nginx, Caddy) par koi domain ya folder request karte hain bina kisi specific file ka naam diye (jaise <code>https://example.com/</code>), toh web server automatically us directory ke andar <code>index.html</code> file ko dhoond kar default homepage ke tor par load kar deta hai[cite: 1].</li>
+</ul>
+
+<div class="proof-box">
+    <strong>⚡ Practical Server Resolution Proof:</strong><br>
+    Navigating to `https://bilalrajput.com/notes/` forces the server engine to automatically look for `https://bilalrajput.com/notes/index.html` and serve it instantly to the requesting browser[cite: 1].
+</div>
 
 <script>
     function toggleTheme() {
