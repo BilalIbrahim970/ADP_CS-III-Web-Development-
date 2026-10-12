@@ -90,7 +90,7 @@ h1 {
 
 .lecture-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 20px;
 }
 
@@ -132,7 +132,8 @@ h1 {
 
 .card h3 {
     margin: 10px 0 8px 0;
-    font-size: 18px;
+    font-size: 20px;
+    color: var(--accent-color);
 }
 
 .card p {
