@@ -172,4 +172,169 @@
 * 📌 **The `index.html` Rule:** Web servers (Apache, Nginx, Caddy) automatically serve `index.html` as the default home page whenever a root directory URL is accessed[cite: 1].
   * *Example:* Browsing `https://example.com/` automatically loads `https://example.com/index.html`[cite: 1].
 
+  # 📚 Lecture 01: Web Development Fundamentals
+> **Course:** Web Development  
+> **Topic:** World Wide Web, Architecture & HTML Basics  
+> **Format:** Detailed Study Notes with Roman Urdu Explanations
+
+---
+
+## 🌳 Quick Lecture Mind-Map / Navigation Tree
+
+- 📁 **Lecture 01: Web Fundamentals**[cite: 1]
+  - 📌 **1. World Wide Web (WWW)**[cite: 1]
+    - 💡 *Invention & History*[cite: 1]
+    - ⚖️ *Internet vs. Web*[cite: 1]
+    - 🌐 *Importance & Impact*[cite: 1]
+  - 📌 **2. Website Architectures**[cite: 1]
+    - 📄 *Static Websites*[cite: 1]
+    - ⚙️ *Dynamic Websites*[cite: 1]
+    - 📊 *Comprehensive Comparison Table*[cite: 1]
+  - 📌 **3. Language Classifications**[cite: 1]
+    - 💻 *Programming Languages*[cite: 1]
+    - 🏷️ *Markup Languages*[cite: 1]
+  - 📌 **4. Hypertext Markup Language (HTML)**[cite: 1]
+    - 🧱 *Anatomy: Tags, Elements, Attributes & Void Tags*[cite: 1]
+    - 🚀 *HTML5 Modern Features*[cite: 1]
+    - 🏛️ *Standards & Bodies (W3C vs WHATWG)*[cite: 1]
+  - 📌 **5. Document Structure & Skeleton**[cite: 1]
+    - 📝 *Standard Boilerplate Code*[cite: 1]
+    - 🔍 *Deep Dive into Structural Tags*[cite: 1]
+  - 📌 **6. Tooling & Server Conventions**[cite: 1]
+    - 🛠️ *Code Editors (IDEs)*[cite: 1]
+    - 📂 *Extensions & `index.html` Default Rule*[cite: 1]
+
+---
+
+## 📖 Detailed Lecture Notes & Explanation
+
+---
+
+### 1. Introduction & Importance of the World Wide Web (WWW)
+
+#### 🔹 Key Definitions
+> 📌 **World Wide Web (WWW):** An information system invented in **1989** by **Sir Tim Berners-Lee** at **CERN**[cite: 1]. It allows digital documents, media, and resources to be identified by **URLs**, interlinked via **hypertext links**, and accessed globally over the Internet[cite: 1].
+
+> 📌 **The Internet:** The global **underlying physical infrastructure** comprising hardware such as computers, routers, data centers, fiber-optic cables, and networking equipment interconnected via protocols like **TCP/IP**[cite: 1].
+
+#### ⚖️ Critical Distinction: Internet vs. Web
+| Feature | 🌐 The Internet | 🕸️ World Wide Web (WWW) |
+| :--- | :--- | :--- |
+| **Nature** | Hardware & Physical Infrastructure[cite: 1] | Software Application & Service Layer[cite: 1] |
+| **Protocols** | TCP/IP, UDP, IP[cite: 1] | HTTP, HTTPS[cite: 1] |
+| **Function** | Connects millions of computers together[cite: 1] | Connects pages/documents using Hypertext[cite: 1] |
+
+#### 🗣️ Explanation (Roman Urdu)
+> **WWW kya hai?** World Wide Web ko 1989 mein Sir Tim Berners-Lee ne CERN mein ijaad kiya tha[cite: 1]. Yeh aik aisa system hai jahan digital documents aur media ko URLs ke zariye pehchana jata hai aur Internet par access kiya jata hai[cite: 1]. 
+> **Internet aur Web mein farq:** Bohat se log isme confuse hotay hain—*Internet* aik physical infrastructure (cables, routers, computers ka jaal) hai jo TCP/IP par chalta hai[cite: 1], jabke *World Wide Web* aik application service hai jo Internet ke upar HTTP/HTTPS protocols ke zariye run karti hai[cite: 1].
+
+---
+
+### 2. Static vs. Dynamic Websites
+
+#### 📑 1. Static Websites
+* **Definition:** Content is delivered to the user's browser **exactly as stored** on the server disk (no active database; flat HTML/CSS/JS files)[cite: 1]. Best for portfolios, landing pages, and resumes[cite: 1].
+
+#### ⚡ 2. Dynamic Websites
+* **Definition:** Content is **generated on the fly** per user request using relational/NoSQL databases (**MySQL, PostgreSQL, MongoDB**) and server-side runtimes (Node.js, Python, PHP)[cite: 1]. Best for social networks and e-commerce stores[cite: 1].
+
+#### 📊 Summary Comparison Table
+| Dimension | 📄 Static Websites | ⚡ Dynamic Websites |
+| :--- | :--- | :--- |
+| **Content Delivery** | Pre-built fixed files[cite: 1] | Generated dynamically per request[cite: 1] |
+| **Database** | No database layer[cite: 1] | Connected to active databases[cite: 1] |
+| **Tech Stack** | HTML5, CSS3, Client JS[cite: 1] | Server Runtimes + DB + Frontend[cite: 1] |
+| **Performance** | Extremely fast, cacheable on CDNs[cite: 1] | Requires server computing & DB queries[cite: 1] |
+
+#### 🗣️ Explanation (Roman Urdu)
+> **Static vs Dynamic:** 
+> - *Static Website* woh hoti hai jiski files pehle se bani hoti hain aur waisi ki waisi browser par show ho jati hain, isme koi database nahi hota (jaise portfolios aur resumes)[cite: 1].
+> - *Dynamic Website* woh hoti hai jiska content user ki request ke mutabiq us waqt (on-the-fly) database se fetch hokar generate hota hai (jaise Facebook ya e-commerce stores)[cite: 1].
+
+---
+
+### 3. Markup Languages vs. Programming Languages
+
+#### 💻 Programming Languages (`Python`, `C++`, `Java`, `JavaScript`)
+* Execute algorithms, mathematical calculations, and contain control flow statements (`if/else`, loops, functions)[cite: 1].
+
+#### 🏷️ Markup Languages (`HTML`, `XML`, `Markdown`)
+* Use tags to describe document structure and presentation. **Do NOT** contain algorithmic logic or loops[cite: 1].
+
+#### 🗣️ Explanation (Roman Urdu)
+> **Farq:** 
+> - *Programming Languages* (jaise Python, JavaScript) logic chalane, calculations karne aur loops (`if/else`) ke liye hoti hain[cite: 1].
+> - *Markup Languages* (jaise HTML) koi logic ya calculation nahi karti, yeh sirf aik instruction manual ki tarah browser ko batati hain ke page ka layout aur structure kaisa dikhega[cite: 1].
+
+---
+
+### 4. Hypertext Markup Language (HTML)
+
+#### 🧱 Anatomy of an HTML Element
+```html
+<!-- Complete Building Block: Element -->
+<p class="summary">Welcome to Web Development.</p>
+│  │             │└──────── Content ────────┘│
+│  │             └─ Attribute Value          └─ Closing Tag
+│  └─ Attribute Name
+└─ Opening Tag
+```[cite: 1]
+
+* **Void / Empty Tags:** Tags with no content and no closing tag (e.g., `<br>`, `<hr>`, `<img>`, `<meta>`, `<input>`)[cite: 1].
+* **HTML5 Features:** Semantic tags (`<header>`, `<nav>`, `<main>`, `<footer>`), native `<video>` / `<audio>`, form validations, and `<canvas>` graphics[cite: 1].
+* **Governing Bodies:** **W3C** and **WHATWG** (maintain HTML as a continuous **Living Standard**)[cite: 1].
+
+#### 🗣️ Explanation (Roman Urdu)
+> **HTML kya hai?** Hypertext ka matlab clickable links hain aur Markup ka matlab tags ka system hai[cite: 1]. 
+> - Aik *Element* mein opening tag, content aur closing tag hota hai[cite: 1]. Kuch tags aisay hotay hain jinka closing tag nahi hota, unhein *Void Tags* kehte hain (misal ke tor par `<br>` ya `<img>`)[cite: 1].
+> - *HTML5* ne puranay tareeqay khatam karke semantic tags (`<header>`, `<footer>`), video/audio tags aur form validation ko asan bana diya hai[cite: 1].
+
+---
+
+### 5. Creating an HTML Document & Core Skeleton
+
+#### 📝 Standard HTML Boilerplate
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 01 - Web Fundamentals</title>
+</head>
+<body>
+    <h1>Welcome to Web Development</h1>
+    <p>This is the visible content area of the document.</p>
+</body>
+</html>
+```[cite: 1]
+
+* `<!DOCTYPE html>`: Forces modern **Standards Mode**[cite: 1].
+* `<html lang="en">`: Root element container[cite: 1].
+* `<head>`: Holds metadata, charset (`UTF-8`), viewport configuration, and title (not visible on page)[cite: 1].
+* `<body>`: Contains all user-visible page content[cite: 1].
+
+#### 🗣️ Explanation (Roman Urdu)
+> **HTML Document ka Structure:** Har HTML file ka aik standard skeleton hota hai:
+> - `<!DOCTYPE html>` browser ko batata hai ke modern standards use karne hain[cite: 1].
+> - `<head>` ke andar meta tags, title aur settings hoti hain jo screen par nazar nahi aatin[cite: 1].
+> - `<body>` ke andar woh sab kuch likha jata hai jo user ko apni screen par website par nazar ata hai[cite: 1].
+
+---
+
+### 6. HTML Editors & Server Conventions
+
+#### 🛠️ Code Editors & File Rules
+* **IDEs:** Visual Studio Code (VS Code) is the industry standard[cite: 1].
+* **Extensions:** Saved with `.html` extension[cite: 1].
+* 📌 **The `index.html` Rule:** Web servers automatically serve `index.html` as the default homepage when a directory URL is requested (e.g., `https://example.com/` loads `index.html`)[cite: 1].
+
+#### 🗣️ Explanation (Roman Urdu)
+> **Editors aur Rules:** 
+> - Code likhne ke liye sabse behtareen software **VS Code** hai[cite: 1].
+> - HTML file ke sath `.html` extension lagti hai[cite: 1]. 
+> - *index.html Rule:* Jab bhi aap kisi website ka main link open karte hain, toh server automatically `index.html` file ko hi sabse pehle load karta hai[cite: 1].
+
+---
+
 ---
