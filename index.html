@@ -21,7 +21,7 @@
                 Completed: <strong id="completedCount">1</strong> / 50 Lectures
             </div>
             <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Search lectures by topic or number...">
+                <input type="text" id="searchInput" placeholder="Search lecture number (e.g. lecture 5)...">
             </div>
         </div>
     </header>
@@ -31,42 +31,26 @@
         <div class="lecture-grid" id="lectureGrid">
             
             <!-- Lecture 01 (Active) -->
-            <a href="lec-1.html" class="card" data-title="lecture 1 web fundamentals html basics wwv internet">
+            <a href="lec-1.html" class="card" data-title="lecture 1 web fundamentals html basics">
                 <div class="card-header">
                     <span class="card-tag completed">Lecture 01</span>
                     <span class="status-icon">✅</span>
                 </div>
-                <h3>Web Fundamentals & HTML Basics</h3>
-                <p>World Wide Web, Internet vs Web, Static vs Dynamic, HTML Boilerplate & Architecture.</p>
+                <h3>Lecture 01</h3>
+                <p>Web Development Fundamentals, WWW, Internet vs Web, and HTML Basics.</p>
             </a>
 
-            <!-- Lectures 2 to 50 (Placeholder Template) -->
-            <!-- Aap jab bhi lec-2.html banayenge, yeh link automatically kaam karne lagega -->
+            <!-- Lectures 02 to 50 Generated Automatically via HTML Links -->
             <script>
-                // JavaScript ke zariye dynamically 2 se 50 tak cards generate kar rahe hain taake code lamba na ho
-                const topics = [
-                    "Advanced HTML Forms & Inputs", "CSS Basics & Selectors", "Box Model & Layouts", "Flexbox Mastery",
-                    "Grid Layout System", "Responsive Design & Media Queries", "CSS Animations & Transitions", "Tailwind CSS Intro",
-                    "JavaScript Fundamentals", "Variables, Data Types & Operators", "Control Flow & Loops", "Functions & Scope",
-                    "DOM Manipulation", "Event Listeners & Handling", "Array Methods & Objects", "Asynchronous JavaScript",
-                    "Fetch API & AJAX", "ES6+ Modern Features", "Git & GitHub Workflow", "Command Line Basics",
-                    "Node.js Introduction", "Express.js Setup", "RESTful APIs", "Database Integration (SQL)",
-                    "MongoDB & NoSQL", "Authentication & JWT", "Password Hashing", "Session Management",
-                    "MVC Architecture", "Middleware in Express", "Error Handling", "File Uploads",
-                    "Deployment on Render/Vercel", "React.js Introduction", "JSX & Components", "Props & State",
-                    "Hooks (useState, useEffect)", "React Router", "Context API", "Redux Toolkit",
-                    "Full Stack Project Part 1", "Full Stack Project Part 2", "Testing with Jest", "TypeScript Basics",
-                    "Next.js Fundamentals", "Performance Optimization", "Security Best Practices", "CI/CD Pipelines", "Final Capstone Project"
-                ];
-
                 for (let i = 2; i <= 50; i++) {
+                    let numStr = i < 10 ? '0' + i : i;
                     document.write(`
-                        <a href="lec-${i}.html" class="card" data-title="lecture ${i} ${topics[i-2].toLowerCase()}">
+                        <a href="lec-${i}.html" class="card upcoming-card" data-title="lecture ${i}" data-lecture-name="Lecture ${numStr}">
                             <div class="card-header">
-                                <span class="card-tag upcoming">Lecture ${i < 10 ? '0' + i : i}</span>
+                                <span class="card-tag upcoming">Lecture ${numStr}</span>
                                 <span class="status-icon">⏳</span>
                             </div>
-                            <h3>Lecture ${i}: ${topics[i-2]}</h3>
+                            <h3>Lecture ${numStr}</h3>
                             <p>Detailed notes, practical code examples, and Roman Urdu explanation for lecture ${i}.</p>
                         </a>
                     `);
